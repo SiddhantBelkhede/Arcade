@@ -24,9 +24,14 @@ function startGame() {
 
 // Handle button clicks and touch events
 document.querySelectorAll(".btn").forEach((button) => {
-  // Add event listeners for both clicks and touch events
+  // Add event listeners for click events
   button.addEventListener("click", handleUserClick);
-  button.addEventListener("touchstart", handleUserClick, { passive: true });
+  
+  // Add touchstart event but prevent default behavior to avoid issues on mobile
+  button.addEventListener("touchstart", function(event) {
+    event.preventDefault(); // Prevent default touch behavior (like scrolling)
+    handleUserClick(event); // Call the same function for consistency
+  }, { passive: false });
 });
 
 // Function to handle user's click or touch on a button
