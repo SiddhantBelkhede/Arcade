@@ -1,0 +1,139 @@
+/* Reset and Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* To remove underlines from text */
+a {
+  text-decoration: none;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 50px 20px;
+}
+
+.hero h2 {
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 18px;
+}
+
+/* Game Container */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.game {
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.game:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.image {
+  height: 200px;
+  width: 100%;
+  border-radius: 5%;
+  background-size: cover;
+  background-position: center;
+}
+
+.drumGame {
+  background-image: url("./images/DrumImage.jpg");
+}
+
+.simonGame {
+  background-image: url("./images/SimonImage.jpg");
+}
+
+.diceGame {
+  background-image: url("./images/DiceRollImage.jpg");
+}
+
+.ghostGame {
+  background-image: url("./images/ghost.png");
+}
+
+.Two048Game {
+  background-image: url("./images/2048Image.png");
+}
+
+h3 {
+  margin-top: 15px;
+  font-size: 22px;
+  color: #444;
+}
+
+p {
+  font-size: 16px;
+  color: #666;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  background-color: #222;
+  color: white;
+  padding: 10px;
+  margin-top: 20px;
+}
