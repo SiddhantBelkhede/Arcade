@@ -7,9 +7,8 @@ let userClickedPattern = []; // Pattern of colors clicked by the user
 let started = false; // Flag to check if the game has started
 let level = 0; // Current level of the game
 
-// Start the game when a key is pressed or on first touch
-document.addEventListener("keydown", startGame); // Keydown event listener
-document.addEventListener("touchstart", startGame, { passive: true }); // Touchstart event listener for mobile
+// Start the game when the Start Button is clicked
+document.getElementById("start-btn").addEventListener("click", startGame);
 
 // Function to start the game
 function startGame() {
@@ -17,6 +16,9 @@ function startGame() {
     document.getElementById("level-title").textContent = `Level ${level}`; // Display the current level
     nextSequence(); // Start the first sequence
     started = true; // Set the flag to true indicating the game has started
+
+    // Hide the Start Button when the game starts
+    document.getElementById("start-btn").style.display = "none";
   }
 }
 
@@ -35,7 +37,6 @@ function handleUserClick(event) {
   playSound(userChosenColor); // Play sound for the clicked button
   animatePress(userChosenColor); // Animate the button press
 
-  console.log(`Button pressed: ${userChosenColor}`); // Log button pressed for clarity
   checkAnswer(userClickedPattern.length - 1); // Check if the user's choice is correct
 }
 
@@ -43,21 +44,15 @@ function handleUserClick(event) {
 function checkAnswer(currentLevel) {
   if (gamePattern[currentLevel] === userClickedPattern[currentLevel]) { 
     // If the user's answer matches the game pattern
-    console.log(
-      `Correct button at level ${level}: ${userClickedPattern[currentLevel]}`
-    ); // Log the correct input
-
-    // If the user has completed the full sequence correctly
     if (userClickedPattern.length === gamePattern.length) {
       setTimeout(nextSequence, 1000); // Go to the next sequence after a short delay
     }
   } else {
     // If the user's answer is wrong
-    console.log(`Wrong button pressed: ${userClickedPattern[currentLevel]}`); // Log the wrong input
     playSound("wrong"); // Play the "wrong" sound
     document.body.classList.add("game-over"); // Add "game-over" class to animate the screen
     document.getElementById("level-title").textContent =
-      "Game Over, Press Any Key to Restart"; // Display the game over message
+      "Game Over, Click Start to Restart"; // Display the game over message
 
     setTimeout(() => {
       document.body.classList.remove("game-over"); // Remove the "game-over" animation after 200ms
@@ -77,9 +72,6 @@ function nextSequence() {
   const randomChosenColor = buttonColors[randomNumber]; // Get the corresponding color
   gamePattern.push(randomChosenColor); // Add the chosen color to the game pattern
 
-  console.log(`Next sequence color: ${randomChosenColor}`); // Log the next sequence color
-
-  // Flash animation for the chosen button
   const chosenButton = document.getElementById(randomChosenColor);
   chosenButton.classList.add("flash"); // Add the flash class to the button
   setTimeout(() => chosenButton.classList.remove("flash"), 500); // Remove the flash effect after 500ms
@@ -105,8 +97,10 @@ function playSound(name) {
 
 // Function to reset the game state after a game over
 function startOver() {
-  console.log("Game restarting..."); // Log the restart
   level = 0; // Reset the level to 0
   gamePattern = []; // Clear the game pattern
   started = false; // Reset the started flag to false
+
+  // Show the Start Button again after game over
+  document.getElementById("start-btn").style.display = "block";
 }
