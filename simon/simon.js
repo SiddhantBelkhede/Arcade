@@ -13,7 +13,7 @@ document.getElementById("start-btn").addEventListener("click", startGame);
 // Function to start the game
 function startGame() {
   if (!started) { // Check if the game hasn't started yet
-    document.getElementById("level-title").textContent = `Level ${level}`; // Display the current level
+    document.getElementById("level-title").textContent = `Level: ${level}`; // Display the current level
     nextSequence(); // Start the first sequence
     started = true; // Set the flag to true indicating the game has started
 
@@ -66,7 +66,7 @@ function checkAnswer(currentLevel) {
 function nextSequence() {
   userClickedPattern = []; // Reset the user's clicked pattern
   level++; // Increase the level
-  document.getElementById("level-title").textContent = `Level ${level}`; // Update the level display
+  document.getElementById("level-title").textContent = `Level: ${level}`; // Update the level display
 
   const randomNumber = Math.floor(Math.random() * 4); // Generate a random number between 0 and 3
   const randomChosenColor = buttonColors[randomNumber]; // Get the corresponding color
