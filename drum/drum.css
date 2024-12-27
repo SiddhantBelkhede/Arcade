@@ -5,11 +5,52 @@ body {
   font-family: "Arvo", cursive;
 }
 
+
+
 h1 {
   font-size: 5rem;
   color: #dbedf3;
   text-shadow: 3px 0 #da0463;
 }
+
+/* Navbar Styles */
+.navbar {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 24px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+a{
+  text-decoration: none;
+}
+
 
 footer {
   margin-top: 20px;
