@@ -1,11 +1,11 @@
 // Detecting Button Press
-var buttons = document.querySelectorAll(".drum"); // Select all drum buttons
-var length = buttons.length; // Get the total number of buttons
+let buttons = document.querySelectorAll(".drum"); // Select all drum buttons
+let length = buttons.length; // Get the total number of buttons
 
 // Loop through each button and add an event listener for click events
-for (var i = 0; i < length; i++) {
+for (let i = 0; i < length; i++) {
   buttons[i].addEventListener("click", function () {
-    var buttonHTML = this.innerHTML; // Get the innerHTML (key) of the clicked button
+    let buttonHTML = this.innerHTML; // Get the innerHTML (key) of the clicked button
 
     makeSound(buttonHTML); // Play the corresponding sound
     buttonAnimation(buttonHTML); // Add the animation effect
@@ -19,7 +19,7 @@ document.addEventListener("keydown", function (event) {
 });
 
 // Caching audio files
-var sounds = {
+let sounds = {
   w: new Audio("./sounds/tom-1.mp3"), // Audio for key 'w'
   a: new Audio("./sounds/tom-2.mp3"), // Audio for key 'a'
   s: new Audio("./sounds/tom-3.mp3"), // Audio for key 's'
@@ -41,7 +41,7 @@ function makeSound(key) {
 
 // Add Button Animation (animation for when a button is pressed)
 function buttonAnimation(key) {
-  var pressedButton = document.querySelector("." + key); // Select the button by its class (key)
+  let pressedButton = document.querySelector("." + key); // Select the button by its class (key)
   if (pressedButton) { // Check if the button exists
     pressedButton.classList.add("pressed"); // Add the 'pressed' class for animation
     setTimeout(function () {
