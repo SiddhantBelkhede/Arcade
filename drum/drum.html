@@ -3,13 +3,28 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Interactive drum kit with sound effects. Play with keys or buttons." />
+    <meta
+      name="description"
+      content="Interactive drum kit with sound effects. Play with keys or buttons."
+    />
     <title>Drum Kit</title>
     <link rel="stylesheet" href="drum.css" />
-    <link href="https://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Arvo"
+      rel="stylesheet"
+    />
   </head>
   <body>
     <header>
+      <nav class="navbar">
+        <a href="../index.html"> <h1>Arcade</h1></a>
+        <ul class="nav-links">
+          <li><a href="../drum/drum.html">Play Drum</a></li>
+          <li><a href="../simon/simon.html">Simon</a></li>
+          <li><a href="../dice/dice.html">Play Dice</a></li>
+          <li><a href="../2048/2048.html">2048</a></li>
+        </ul>
+      </nav>
       <h1 id="title">Drum 🥁 Kit</h1>
     </header>
     <main class="set" role="region" aria-label="Drum Kit">
@@ -21,7 +36,7 @@
       <button class="k drum" aria-label="Drum K">k</button>
       <button class="l drum" aria-label="Drum L">l</button>
     </main>
-    
+
     <script src="drum.js" charset="utf-8"></script>
   </body>
 </html>
