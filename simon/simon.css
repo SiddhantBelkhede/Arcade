@@ -1,195 +1,127 @@
 /* Reset and Global Styles */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Press Start 2P', sans-serif;
-  }
-  
-  body {
-    text-align: center;
-    background: linear-gradient(to bottom, #011F3F, #022C5A);
-    color: #FEF2BF;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    font-size: 16px; /* Default font size for readability */
-  }
-  
-  /* Header */
-  header {
-    padding: 20px;
-  }
-  
-  #level-title {
-    font-size: 2.5rem;
-    margin: 20px 0;
-  }
-  
-  /* Container and Layout */
-  .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    margin: 20px;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-  }
-  
-  .btn {
-    height: 150px;
-    width: 150px;
-    border: 10px solid black;
-    border-radius: 20%;
-    cursor: pointer;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-  }
-  
-  .btn:active {
-    transform: scale(0.9);
-  }
-  
-  .green {
-    background-color: #00A74A;
-  }
-  
-  .red {
-    background-color: #FF5733;
-  }
-  
-  .yellow {
-    background-color: #FFC300;
-  }
-  
-  .blue {
-    background-color: #3498DB;
-  }
-  
-  /* Pressed effect */
-  .pressed {
-    box-shadow: 0 0 20px white;
-    background-color: grey;
-  }
-  
-  /* Game Over effect */
-  .game-over {
-    background-color: red;
-    opacity: 0.8;
-  }
-  
-  /* Footer */
-  footer {
-    background-color: #011F3F;
-    padding: 10px;
-    color: white;
-    font-size: 0.9rem;
-  }
-  
-  /* Start Button Styles */
-  .start-btn {
-    font-size: 1.5rem;
-    padding: 15px 30px; /* Adjust padding for better size */
-    background-color: #FF5733; /* Use a color from the theme */
-    color: white;
-    border: none;
-    border-radius: 50px; /* Rounded button for a modern look */
-    cursor: pointer;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Add shadow for a "lifted" effect */
-    transition: all 0.3s ease;
-    font-family: 'Press Start 2P', sans-serif;
-  }
-  
-  /* Hover Effect for Start Button */
-  .start-btn:hover {
-    background-color: #FF704D; /* Lighter shade of red on hover */
-    transform: translateY(-4px); /* Slightly lift the button on hover */
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4); /* Increase shadow on hover */
-  }
-  
-  /* Focus Effect for Start Button */
-  .start-btn:focus {
-    outline: none;
-    box-shadow: 0 0 10px 4px rgba(255, 87, 51, 0.6); /* Highlight on focus */
-  }
-  
-  /* Mobile-friendly Button */
-  @media (max-width: 768px) {
-    .start-btn {
-      font-size: 1.2rem; /* Slightly smaller font on mobile */
-      padding: 12px 25px; /* Adjust padding for mobile devices */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .start-btn {
-      font-size: 1rem; /* Adjust font size for very small screens */
-      padding: 10px 20px; /* Adjust padding for smaller phones */
-    }
-  }
-  
-  /* Media Queries for Mobile Support */
-  @media (max-width: 768px) {
-    /* For smaller screens, we want to make buttons a bit smaller and rearrange the layout */
-    #level-title {
-      font-size: 2rem; /* Adjust title font size for mobile */
-    }
-  
-    .btn {
-      height: 120px; /* Smaller buttons for mobile */
-      width: 120px;
-    }
-  
-    .start-btn {
-      font-size: 1.2rem; /* Smaller start button font size */
-      padding: 8px 15px; /* Adjust padding for mobile */
-    }
-  
-    .container {
-      gap: 15px; /* Reduce gap between elements */
-    }
-  
-    .row {
-      gap: 15px; /* Reduce gap between buttons */
-    }
-  
-    footer {
-      font-size: 0.8rem; /* Smaller footer font size for mobile */
-    }
-  }
-  
-  @media (max-width: 480px) {
-    /* For very small screens like phones in portrait mode */
-    #level-title {
-      font-size: 1.8rem; /* Adjust further for small phones */
-    }
-  
-    .btn {
-      height: 100px; /* Even smaller buttons for tiny screens */
-      width: 100px;
-    }
-  
-    .start-btn {
-      font-size: 1rem; /* Adjust font size of start button */
-      padding: 6px 12px; /* Smaller padding */
-    }
-  
-    .container {
-      gap: 10px; /* Reduce space for smaller screens */
-    }
-  
-    .row {
-      gap: 10px; /* Reduce space between buttons */
-    }
-  
-    footer {
-      font-size: 0.7rem; /* Smaller footer font size for very small screens */
-    }
-  }
-  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Press Start 2P", sans-serif;
+}
+
+body {
+  text-align: center;
+  background: linear-gradient(to bottom, #011f3f, #022c5a);
+  color: #fef2bf;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  padding: 20px;
+}
+
+#level-title {
+  font-size: 2.5rem;
+  margin: 20px 0;
+}
+
+/* Navbar Styles */
+.navbar {
+  background-color: #222;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  font-size: 24px;
+  font-family: "Arial", sans-serif;
+  color: white;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s;
+  font-family: "Arial", sans-serif;
+}
+
+.nav-links a:hover {
+  color: #ff4081;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.btn {
+  height: 150px;
+  width: 150px;
+  border: 10px solid black;
+  border-radius: 20%;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn:active {
+  transform: scale(0.9);
+}
+
+.green {
+  background-color: #00a74a;
+}
+
+.red {
+  background-color: #ff5733;
+}
+
+.yellow {
+  background-color: #ffc300;
+}
+
+.blue {
+  background-color: #3498db;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+footer {
+  background-color: #011f3f;
+  padding: 10px;
+  color: white;
+  font-size: 0.9rem;
+}
