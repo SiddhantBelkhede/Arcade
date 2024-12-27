@@ -1,43 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simon Game</title>
+    <link rel="stylesheet" href="simon.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Simon Game</title>
-  <link rel="stylesheet" href="./simon.css">
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
-</head>
+  <body>
+    <!-- Header -->
+    <header>
+      <nav class="navbar">
+        <a href="../index.html"> <h1>Arcade</h1></a>
+        <ul class="nav-links">
+          <li><a href="../drum/drum.html">Play Drum</a></li>
+          <li><a href="../simon/simon.html">Simon</a></li>
+          <li><a href="../dice/dice.html">Play Dice</a></li>
+          <li><a href="../2048/2048.html">2048</a></li>
+        </ul>
+      </nav>
+      <h1 id="level-title">Tap Anywhere or Press Any Key to Start</h1>
+    </header>
 
-<body>
-  <!-- Header -->
-  <header>
-    <h1 id="level-title">Tap Start to Play</h1>
-  </header>
-  
-  <!-- Game Buttons -->
-  <main class="container">
-    <div class="row">
-      <button id="green" class="btn green" aria-label="Green Button"></button>
-      <button id="red" class="btn red" aria-label="Red Button"></button>
-    </div>
+    <!-- Game Buttons -->
+    <main class="container">
+      <div class="row">
+        <button id="green" class="btn green" aria-label="Green Button"></button>
+        <button id="red" class="btn red" aria-label="Red Button"></button>
+      </div>
 
-    <div class="row">
-      <button id="yellow" class="btn yellow" aria-label="Yellow Button"></button>
-      <button id="blue" class="btn blue" aria-label="Blue Button"></button>
-    </div>
-    
-    <!-- Start Button -->
-    <button id="start-btn" class="start-btn">Start Game</button>
-  </main>
+      <div class="row">
+        <button
+          id="yellow"
+          class="btn yellow"
+          aria-label="Yellow Button"
+        ></button>
+        <button id="blue" class="btn blue" aria-label="Blue Button"></button>
+      </div>
+    </main>
 
-  <!-- Footer -->
-  <footer>
-    <p>&copy; 2024 Simon Game | Enjoy Playing!</p>
-  </footer>
+    <!-- Footer -->
+    <footer>
+      <p>&copy; 2024 Simon Game | Enjoy Playing!</p>
+    </footer>
 
-  <!-- JavaScript -->
-  <script src="simon.js" charset="utf-8"></script>
-</body>
-
+    <!-- JavaScript -->
+    <script src="simon.js" charset="utf-8"></script>
+  </body>
 </html>
